@@ -20,21 +20,21 @@ int is_number(char *str)
     }
     return 1;
 }
+
+int str_to_int(char *str)
 {
-    int str_to_int(char *str)
-    {
-        int i = 0;
-        int num = 0;
-        while (str[i] != '\0')
-            if (isdigit(str[i]) == 0)
-            {
-                return -1;
-            }
-        num = num * 10 + (str[i] – '0');
-        i++;
-    }
-    return num;
+    int i = 0;
+    int num = 0;
+    while (str[i] != '\0')
+        if (isdigit(str[i]) == 0)
+        {
+            return -1;
+        }
+    num = num * 10 + (str[i] – '0');
+    i++;
 }
+return num;
+
 int main(int argc, char *argv[])
 {
     int sockfd, newsockfd, portno;
